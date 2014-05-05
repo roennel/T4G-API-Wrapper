@@ -237,20 +237,42 @@ Example Response:
             "gameMode": "gpm_rush",
             "pbucon": {
                 "enabled": true,
-                "lastHeartbeat": "1399325698",
+                "lastHeartbeat": "1399326294",
                 "tick": {
                     "period": 300,
                     "type": "seconds"
                 }
             },
             "backend": {
-                "duration": "0.163869",
+                "duration": "0.156991",
                 "lastHeartbeat": null,
                 "tick": {
                     "period": 1,
                     "type": "seconds"
                 }
-            }
+            },
+            "blacklists": [
+                {
+                    "blacklistId": "1",
+                    "kicks": "2134",
+                    "label": "Cheating"
+                },
+                {
+                    "blacklistId": "2",
+                    "kicks": "975",
+                    "label": "Statspadding"
+                },
+                {
+                    "blacklistId": "3",
+                    "kicks": "50",
+                    "label": "Glitching"
+                },
+                {
+                    "blacklistId": "5",
+                    "kicks": "0",
+                    "label": "Macro"
+                }
+            ]
         },
         ...
     }
