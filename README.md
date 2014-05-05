@@ -180,11 +180,11 @@ $servers = $api->getBlacklist()->getServers
 ```
 
 Available Filters:
-| Key        | Values           | Description | 
-| ---------- | ---------------- | ----------- |
-| online     | false|true       | Show Online Servers |
-| disabled   | false|true       | Show Disabled Servers |
-| noLogin    | false|true       | Show Servers with no Valid Login Data |
+Key | Values | Description
+--- | --- | ---
+online | false/true | Show Online Servers
+disabled | false/true | Show Disabled Servers
+noLogin | false/true | Show Servers with no Valid Login Data
 
 Example Response:
 ```javascript
