@@ -89,6 +89,11 @@ class Endpoint
     {
       echo $e->getMessage();
     }
+    
+    foreach($this->args as $key => $value)
+    {
+      $query[$key] = $value;
+    }
 
     foreach($this->options as $key => $value)
     {
