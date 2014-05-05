@@ -22,6 +22,26 @@ $blacklist->id = 'blacklist';
 
   $blacklist->addEndpoint($ep);
   /* /ENDPOINT: Server */
+  
+  /* ENDPOINT: Servers */
+  $ep = new API\Endpoint;
+  $ep->id = 'servers';
+  $ep->path = '/blacklist/servers';
+  $ep->requiredParams = 
+  [
+    'api_key',
+    'api_secret'
+  ];
+  
+  $ep->optionalParams = 
+  [
+    'disabled'  => [false, true],
+    'online'    => [false, true],
+    'noLogin'   => [false, true]
+  ];
+  
+  $blacklist->addEndpoint($ep);
+  /* /ENDPOINT: Server */
 
 API::addSection($blacklist);
 /*  /SECTION: Blacklist */
