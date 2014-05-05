@@ -9,7 +9,7 @@ ini_set('display_errors', true);
 require 'API.php';
 
 $api = new API;
-$api->auth('f1s5s7fs', '3rasddi5');
+$api->auth('apikey', 'apisecret');
 
 // Fetch Server #16 Info, Events, Status, Players (Only Russian Team), Chat (only chatlines containing 'hack'), Kicklog
 $test = $api->getBlacklist()->getServer(['serverId' => 16])->events()->status()->players(['team' => 'ru'])->chat(['search' => 'hack'])->kicklog()->execute();
