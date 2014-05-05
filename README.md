@@ -1,6 +1,11 @@
 T4G-API-Wrapper
 ===============
 
+First Header  | Second Header
+------------- | -------------
+Content Cell  | Content Cell
+Content Cell  | Content Cell
+
 A PHP Wrapper for the Tools4Games API
 
 Examples are in test.php
