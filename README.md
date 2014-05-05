@@ -7,10 +7,14 @@ Examples are in test.php
 
 You need to create an API Key @ http://blacklist.tools4games.com
 
+#### Auth
 ```php
 $api = new API;
 $api->auth('api_key', 'api_secret');
+```
 
+#### Endpoint: Server
+```php
 $test = $api->getBlacklist(); // <- Get the Blacklist Section of the API (Currently the only one)
 $test = $test->getServer(['serverId' => 16]); // <- Get the Server, either by serverId or bookmarkLink
 $test = $test->events(); // <- Fetches the Server Events
@@ -165,3 +169,72 @@ Example Response:
         ...
     ]
 }
+```
+
+#### Endpoint: Servers
+```php
+$servers = $api->getBlacklist()->getServers
+([
+  'online' => true
+])->execute(); // Get All Online Servers
+```
+
+Available Filters:
+| Key        | Values           | Description | 
+| ---------- | ---------------- | ----------- |
+| online     | false|true       | Show Online Servers |
+| disabled   | false|true       | Show Disabled Servers |
+| noLogin    | false|true       | Show Servers with no Valid Login Data |
+
+Example Response:
+```javascript
+{
+    "success": true,
+    "servers": [
+        {
+            "serverId": "14",
+            "country": "DE",
+            "name": "Honey Badgers EU",
+            "bookmarkLink": "75d50a87-2b3a-431d-8683-e37f14d9e2b8",
+            "created": "0",
+            "hoster": "branzone",
+            "disabled": false,
+            "online": true,
+            "noLogin": false,
+            "players": {
+                "current": "28",
+                "max": "32",
+                "joining": "1"
+            },
+            "tickets": {
+                "ru": "0",
+                "us": "-9899",
+                "max": "100"
+            },
+            "time": {
+                "elapsed": "9",
+                "remaining": "-1"
+            },
+            "map": "downtown",
+            "gameMode": "gpm_rush",
+            "pbucon": {
+                "enabled": true,
+                "lastHeartbeat": "1399325698",
+                "tick": {
+                    "period": 300,
+                    "type": "seconds"
+                }
+            },
+            "backend": {
+                "duration": "0.163869",
+                "lastHeartbeat": null,
+                "tick": {
+                    "period": 1,
+                    "type": "seconds"
+                }
+            }
+        },
+        ...
+    }
+}
+```
