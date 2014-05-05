@@ -42,7 +42,7 @@ Class | Filters
 --- | --- 
 events() | -
 chat() | search = string (Searches for occurences in Message)
-players() | team - RU/US (Filters by Team)
+players() | team = RU/US (Filters by Team)
 status() | - 
 kicklog() | -
 
