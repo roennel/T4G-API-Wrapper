@@ -29,6 +29,23 @@ $test = $text->execute(); // <- Execute the Command and return the Response as P
 $test = $api->getBlacklist()->getServer(['serverId' => 16])->events()->status()->execute();
 ```
 
+Available Filters:
+
+Key | Values | Description
+--- | --- | ---
+serverId | int | Filter by T4G ServerId
+bookmarkLink | string | Filter by BookmarkLink
+
+Available Sub-Requests:
+
+Class | Filters
+--- | --- 
+events() | -
+chat() | search = string (Searches for occurences in Message)
+players() | team - RU/US (Filters by Team)
+status() | - 
+kicklog() | -
+
 Example Response:
 ```javascript
 {
