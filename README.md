@@ -38,7 +38,7 @@ Example Response:
         "noLogin": false,
         "pbucon": {
             "enabled": true,
-            "lastHeartbeat": "05.05.2014 20:21:42",
+            "lastHeartbeat": "1399323452",
             "tick": {
                 "period": 300,
                 "type": "seconds"
@@ -46,7 +46,7 @@ Example Response:
         },
         "backend": {
             "duration": "0.093081",
-            "lastHeartbeat": "05.05.2014 20:25:13",
+            "lastHeartbeat": "1399324410",
             "tick": {
                 "period": 1,
                 "type": "seconds"
