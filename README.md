@@ -20,6 +20,9 @@ $test = $test->chat(); // <- Fetches the Server Chat
 $test = $test->kicklog(); // <- Fetches the Server Kicklog
 
 $test = $text->execute(); // <- Execute the Command and return the Response as PHP Object
+
+// You can also Chain those Methods into one Call, like so:
+$test = $api->getBlacklist()->getServer(['serverId' => 16])->events()->status()->execute();
 ```
 
 Example Response:
