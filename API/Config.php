@@ -42,6 +42,24 @@ $blacklist->id = 'blacklist';
   
   $blacklist->addEndpoint($ep);
   /* /ENDPOINT: Server */
+  
+  /* ENDPOINT: Player */
+  $ep = new API\Endpoint;
+  $ep->id = 'player';
+  $ep->path = '/blacklist/player';
+  $ep->requiredParams = 
+  [
+    'api_key',
+    'api_secret'
+  ];
+  
+  $ep->optionalParams = 
+  [
+    
+  ];
+  
+  $blacklist->addEndpoint($ep);
+  /* /ENDPOINT: Player */
 
 API::addSection($blacklist);
 /*  /SECTION: Blacklist */
