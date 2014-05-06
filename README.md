@@ -278,3 +278,87 @@ Example Response:
     }
 }
 ```
+
+#### Endpoint: Player
+
+Example:
+```php
+$test = $api->getBlacklist()->getPlayer
+([
+  'nucleusId' => 2574913502
+])->execute();
+```
+
+Available Filters:
+
+Key | Values | Description
+--- | --- | ---
+nucleusId | int | Filter by Nucleus ID
+
+Example Response:
+```javascript
+{
+    "success": true,
+    "players": [
+        {
+            "nucleusId": "2574913502",
+            "soldierId": "550747325",
+            "kit": "0",
+            "level": "30",
+            "name": "kramarius",
+            "playing": false,
+            "activities": [
+                {
+                    "action": "leave",
+                    "date": "1396624302",
+                    "server": {
+                        "name": "P4F-Ballerbude",
+                        "serverId": "1294",
+                        "bookmarkLink": "d013fa4c-6054-406f-8866-c5b556c7b681"
+                    }
+                },
+                {
+                    "action": "join",
+                    "date": "1396624082",
+                    "server": {
+                        "name": "P4F-Ballerbude",
+                        "serverId": "1294",
+                        "bookmarkLink": "d013fa4c-6054-406f-8866-c5b556c7b681"
+                    }
+                }
+            ],
+            "submissions": [
+                {
+                    "created": "1397340363",
+                    "type": "Cheating",
+                    "done": "1"
+                },
+                {
+                    "created": "1397204594",
+                    "type": "Cheating",
+                    "done": "1"
+                },
+                {
+                    "created": "1396047286",
+                    "type": "Cheating",
+                    "done": "1"
+                },
+                {
+                    "created": "1381416718",
+                    "type": "Cheating",
+                    "done": "1"
+                }
+            ],
+            "bans": [
+                {
+                    "banId": "42327",
+                    "blacklistId": "1",
+                    "created": "1397558616",
+                    "active": "1",
+                    "type": "Cheating"
+                }
+            ]
+        }
+    ]
+}
+```
