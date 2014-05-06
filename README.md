@@ -9,7 +9,9 @@ You need to create an API Key @ http://blacklist.tools4games.com
 
 ### Available Endpoints
 Server https://github.com/roennel/T4G-API-Wrapper#endpoint-server
+
 Servers https://github.com/roennel/T4G-API-Wrapper#endpoint-servers
+
 Player https://github.com/roennel/T4G-API-Wrapper#endpoint-player
 
 #### Auth
